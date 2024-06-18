@@ -15,22 +15,24 @@ const My_website = () => {
   };
 
   return (
-    <div className="main">
-      <div className="profile">
-        <h1>Github Profile</h1>
+    <div>
+      <div className="main">
+        <div className="profile">
+          <h1>Github Profile</h1>
 
-        <p>Generate your Github Profile</p>
-        <form action="">
-          <input
-            type="text"
-            value={inputdata}
-            onChange={handleChange}
-            placeholder="Github Username"
-          />
-          <button className="generate" onClick={handleSubmit}>
-            Generate
-          </button>
-        </form>
+          <p>Generate your Github Profile</p>
+          <form action="">
+            <input
+              type="text"
+              value={inputdata}
+              onChange={handleChange}
+              placeholder="Github Username"
+            />
+            <button className="generate" onClick={handleSubmit}>
+              Generate
+            </button>
+          </form>
+        </div>
       </div>
     </div>
   );

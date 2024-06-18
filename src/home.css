@@ -6,6 +6,8 @@
 }
 
 header {
+  display: flex;
+  flex-direction: row;
   padding: 20px;
   justify-content: space-between;
   margin: 0%;
@@ -15,15 +17,14 @@ header {
   width: 50px;
   height: 50px;
   cursor: pointer;
-  position: fixed;
+
   top: 50px;
   left: 50px;
+  background-color: white;
+  border-radius: 50%;
 }
 
 .hire {
-  position: fixed;
-  top: 50px;
-  right: 50px;
   background-color: #f24e1e;
   color: white;
   text-decoration: none;
@@ -35,22 +36,23 @@ header {
   border-radius: 6px;
 }
 .container {
-  z-index: 0;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  width: 1000px;
 
-  vertical-align: middle;
+  gap: 30px;
 
-  margin-left: 300px;
-  width: 900px;
   padding: 20px;
   background-color: #f1f1f1;
   text-align: center;
   border-radius: 30px;
 }
-h2 {
-  margin-top: 100px;
+.username {
+  padding-top: 30px;
 }
-
 .user {
+  display: flex;
   width: 150px;
   height: 150px;
   border-radius: 50%;
@@ -58,4 +60,140 @@ h2 {
 
 .hire:hover {
   background-color: green;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 400px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-evenly;
+  height: 300px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  gap: 3px;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+}
+
+.email-icon {
+  background: url("email-iconnn.webp") no-repeat center center / contain;
+}
+
+.location-icon {
+  background: url("location-iconn.png") no-repeat center center / contain;
+}
+
+.twitter-icon {
+  background: url("twitter-icon.webp") no-repeat center center / contain;
+}
+
+.organization-icon {
+  background: url("organization-icon.png") no-repeat center center / contain;
+}
+
+.date-icon {
+  background: url("calendar-icon.jpg") no-repeat center center / contain;
+}
+
+.website-icon {
+  width: 30px;
+  height: 30px;
+  background: url("web-icon.jpg") no-repeat center center / contain;
+}
+
+.label {
+  color: #888;
+  font-size: 12px;
+}
+
+.value {
+  color: #000;
+  font-size: 14px;
+  font-weight: bold;
+}
+.description {
+  text-align: left;
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+}
+.bio {
+  display: flex;
+  text-align: left;
+  flex-direction: column;
+  gap: 15px;
+}
+.header_bio {
+  text-align: left;
+  font-size: 19px;
+  font-weight: bold;
+}
+
+.profile-stats-card {
+  display: flex;
+  flex-direction: row;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.profile-stats-card__title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.profile-stats-card__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.profile-stats-card__item {
+  padding: 20px;
+  display: inline-block;
+}
+
+.profile-stats-card__item__count {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.profile-stats-card__item__label {
+  display: block;
+  padding: 14px;
+  font-size: 0.8rem;
+  color: black;
+  background: #c4c4c459;
+}
+
+.card_2 {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 400px;
+  text-align: left;
+  padding: 20px;
+
+  justify-content: space-evenly;
+  height: 300px;
+}
+.cont_body {
+  display: flex;
+  flex-direction: column;
 }
