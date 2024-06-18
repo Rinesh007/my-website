@@ -26,6 +26,7 @@ const Home = () => {
       const api = await response.json();
       if (!response.ok) {
         alert(api.message);
+        handleClick();
         return;
       }
 
