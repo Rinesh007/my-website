@@ -5,8 +5,7 @@ import { useParams } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 import "./home.css";
 import back from "./back.jpg";
-import user from "./user.jpg";
-import axios from "axios";
+
 const Home = () => {
   const [user_data, setUser_data] = useState(false);
   const navigate = useNavigate();
@@ -19,8 +18,6 @@ const Home = () => {
   const data = location.state?.data;
 
   const username = data;
-  const [profile, setProfile] = useState(null);
-  const [error, setError] = useState("");
 
   const handleSearch = async () => {
     try {
@@ -48,6 +45,7 @@ const Home = () => {
         photo: api.avatar_url,
         hireable: api.hireable,
       });
+      console.log(user_data.hireable);
     } catch (error) {
       console.log(error.message);
     }
@@ -58,15 +56,24 @@ const Home = () => {
   }, []);
   return (
     <div>
-      <div class>
+      <div>
         <header>
           <img src={back} onClick={handleClick} className="back" />
-          if ({user_data.hireable}) {<button className="hire">Hire me</button>}
+          <div>
+            {user_data.hireable ? (
+              <button className="hire">Hire me</button>
+            ) : (
+              ""
+            )}
+          </div>
         </header>
       </div>
       <div className="cont_body">
-        <div className="container">
+        <div>
           <img src={user_data.photo} className="user" />
+        </div>
+
+        <div className="container">
           <div className="user_info">
             <h2 class="username">{user_data.namee}</h2>
             <p>{username}</p>
